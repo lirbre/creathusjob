@@ -31,7 +31,7 @@ const EventCard = ({ ...props }: InfoProps) => {
                     <small>{props.campus.split('de')[1]}</small>
                 </div>
             </div>
-            <a href={props.detailsURL} target={'_blank'}>
+            <a href={props.detailsURL} target={'_blank'} rel="noreferrer">
                 <button className="p-3 bg-orange-500 dark:bg-orange-400 w-10/12 rounded-xl ripple mt-4 hover:opacity-90">
                     <small className="text-white dark:text-gray-50 font-black">Página do Curso</small>
                 </button>
