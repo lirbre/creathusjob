@@ -1,8 +1,7 @@
-import { Card } from '@/components'
+import { Card , Nav } from '@/components'
 import { InfoProps } from '@/helpers/types'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
-import Nav from '@/components/Nav'
 
 const Home = () => {
   const { resolvedTheme, setTheme } = useTheme()
