@@ -29,3 +29,52 @@ body {
   font-family: Poppins;
   @apply bg-primary text-primary overflow-x-hidden;
 }
+
+
+.glass {
+  @apply backdrop-blur-sm;
+}
+
+.overlay {
+  @apply bg-secondary opacity-70 w-full h-full absolute cursor-pointer;
+}
+
+.lock-scroll {
+  overflow-y: hidden !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

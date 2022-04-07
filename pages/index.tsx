@@ -2,6 +2,7 @@ import { Card } from '@/components'
 import { InfoProps } from '@/helpers/types'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import Nav from '@/components/Nav'
 
 const Home = () => {
   const { resolvedTheme, setTheme } = useTheme()
@@ -23,12 +24,7 @@ const Home = () => {
 
   return (
     <div>
-      <button
-        onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      >
-        click here to change the theme
-      </button>
-
+      <Nav/>
       <div className="container mt-10 text-center max-w-[90ch]">
         {info.map((info, i: number) => <div key={i}>i</div>)}
       </div>
