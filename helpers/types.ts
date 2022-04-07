@@ -9,6 +9,7 @@ export interface InfoProps {
 }
 
 interface EventsProp {
+    length: ReactNode;
     title: string
     startTime: Date
     endTime: Date

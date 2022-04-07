@@ -19,14 +19,14 @@ const Nav = () => {
     return navItems.map(item => (
       <Link href={item.href} key={item.href}>
         <a>
-          <p className='dark:hover:text-gray-600 hover:text-white hover:opacity-90'>{item.name}</p>
+          <p className='dark:hover:text-gray-300 hover:text-black hover:opacity-90'>{item.name}</p>
         </a>
       </Link>
     ))
   }, [])
 
   return (
-    <nav className="bg-secondary w-full py-2.5 px-10 shadow-md z-[6] mb-5">
+    <nav className="bg-[#f2f2f2] dark:bg-secondary w-full py-2.5 px-10 shadow-md z-[6] mb-5">
       <div className='w-full max-w-7xl mx-auto flex items-center justify-center gap-4'>
         <div className="w-min cursor-pointer hover:opacity-70">
           <Link href="/">
