@@ -3,13 +3,12 @@ export interface InfoProps {
     title: string
     startTime: Date
     endTime: Date
-    events: EventsProp
+    events: EventsProp[]
     speakers: string[]
     campus: string
 }
 
 interface EventsProp {
-    length: ReactNode;
     title: string
     startTime: Date
     endTime: Date
