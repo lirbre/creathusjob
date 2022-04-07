@@ -6,7 +6,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 const EventCard = ({ ...props }: InfoProps) => {
     const renderSpeakers = useMemo(() => {
-        return props.speakers.map((speaker) => <small className="text-sm">{speaker}<br/></small>)
+        return props.speakers.map((speaker, i: number) => <small className="text-sm" key={i}>{speaker}<br/></small>)
     }, [props])
 
     return (
