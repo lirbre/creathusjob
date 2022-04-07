@@ -26,7 +26,7 @@ const Nav = () => {
   }, [])
 
   return (
-    <nav className="bg-[#f2f2f2] dark:bg-secondary w-full py-2.5 px-10 shadow-md z-[6] mb-5">
+    <nav className="bg-[#f2f2f2] dark:bg-secondary w-full py-2.5 px-10 shadow-md z-[6] mb-5 fixed top-0">
       <div className='w-full max-w-7xl mx-auto flex items-center justify-center gap-4'>
         <div className="w-min cursor-pointer hover:opacity-70">
           <Link href="/">

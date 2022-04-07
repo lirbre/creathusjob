@@ -6,6 +6,7 @@ export interface InfoProps {
     events: EventsProp[]
     speakers: string[]
     campus: string
+    detailsURL: string
 }
 
 interface EventsProp {
