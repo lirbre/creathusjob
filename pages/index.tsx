@@ -1,7 +1,7 @@
 import { Card , EventCard, Nav } from '@/components'
 import { InfoProps } from '@/helpers/types'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const Home = () => {
   const { resolvedTheme, setTheme } = useTheme()
@@ -9,13 +9,17 @@ const Home = () => {
   const [maxCards, setMaxCards] = useState<number>(4)
 
   const getInformation = () => {
-    fetch(
-      'https://gist.githubusercontent.com/creathusjobs/3c53322e8dc8c3b524cfb2623c097cc5/raw/adc988f34c4fb1a0fe12035b4b030259776115ea/response.json'
-    ).then((r) => r.json())
-    .then((r) => {
-      setInfo([...r])
-      console.log(r)
-    })
+    useCallback(() => {
+      fetch(
+        'https://gist.githubusercontent.com/creathusjobs/3c53322e8dc8c3b524cfb2623c097cc5/raw/adc988f34c4fb1a0fe12035b4b030259776115ea/response.json'
+      ).then((r) => r.json())
+      .then((r) => {
+        setInfo([...r])
+        console.log(r)
+
+        return r
+      })
+    }, [])
   }
 
   useEffect(() => {

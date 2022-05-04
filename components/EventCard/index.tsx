@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from "react"
+import { memo, useMemo } from "react"
 import { InfoProps } from "@/helpers/types"
 import { AiFillAndroid } from 'react-icons/ai'
 import { BsBook, BsPersonFill } from 'react-icons/bs'
@@ -40,4 +40,4 @@ const EventCard = ({ ...props }: InfoProps) => {
     )
 }
 
-export default EventCard
+export default memo(EventCard)
