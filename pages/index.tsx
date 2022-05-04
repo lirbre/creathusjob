@@ -41,7 +41,7 @@ const Home = () => {
     )
 
   return mapInfo
-  }, [info])
+  }, [info, maxCards])
 
   return (
     <div>
